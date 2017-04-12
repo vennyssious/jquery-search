@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="search.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <title>Pesquisa</title>
+  </head>
+  <body>
+    <div class="search">
+    	<input type="text" name="search" id="search">
+    </div>
+
+    <div class="search">
+    	<input type="text" name="search-term" id="search-basic">
+    </div>
+
+	<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+  	<script src="search.min.js"></script>
+
+	<script>
+
+		jQuery(function($){
+
+			var search_all= $('#search');
+
+			search_all.metaSearch({
+
+				'fields' : {
+					'id'          : 'Id',
+					'nome'        : 'Nome',
+					'email'       : 'E-mail',
+					'cidade'      : 'Cidade',
+					'uf'          : 'Estado',
+					'tel'         : 'Telefone',
+					'disponivel'  : 'Disponibilidade',
+					'status'      : 'Situação',
+					'endereco'    : 'Endereço',
+					'cep'         : 'CEP',
+					'bio'         : 'Biografia curta',
+					'facul'       : 'Instituição de ensino',
+					'curso'       : 'Curso',
+					'formatura'   : 'Formatura',
+					'experiencia' : 'Onde trabalhou',
+					'funcao'      : 'Função',
+					'periodo'     : 'Período',
+					'idioma'      : 'Idiomas',
+					'pauta'       : 'Paute-nos',
+					'colaborar'   : 'Colaboração'
+				},
+
+				// 'fields' : ['Gol', 'Zag', 'Lat', 'Mei', 'Ata'],
+
+				'keyDispatch' : '@',
+				'form'        : 'search-form',
+				'search_opts' : {
+
+					'options' : {
+						'opt_1' : {
+							'value': '1',
+							'label': 'Opção 1',
+						},
+
+						'opt_2' : {
+							'value': '2',
+							'label': 'Opção 2',
+						},
+
+						'opt_3' : {
+							'value': '3',
+							'label': 'Opção 3',
+						},
+
+						'opt_4' : {
+							'value': '4',
+							'label': 'Opção 4',
+						},
+
+						'opt_5' : {
+							'value': '5',
+							'label': 'Opção 5',
+						},
+
+
+						'opt_6' : {
+							'value': '6',
+							'label': 'Opção 6',
+						},
+
+
+						'opt_7' : {
+							'value': '7',
+							'label': 'Opção 7',
+						},
+
+
+						'opt_8' : {
+							'value': '8',
+							'label': 'Opção 8',
+						},
+
+
+						'opt_9' : {
+							'value': '9',
+							'label': 'Opção 9',
+						},
+
+
+					},
+					'selected' : 'opt_4'
+
+				},
+				'search_terms' : [
+					'@email:teste',
+					'@telefone:123',
+					'@tsete:12421',
+					'kakakaka',
+					'kakakaka',
+					'kakakaka',
+					'kakakaka',
+				]
+			});
+			var search_basic = $('#search-basic');
+
+			search_basic.metaSearch({
+
+				'fields' : ['Gol', 'Zag', 'Lat', 'Mei', 'Ata'],
+				'keyDispatch' : '+',
+			});
+
+		});
+
+
+
+	</script>
+
+  </body>
+</html>
